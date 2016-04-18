@@ -1,0 +1,40 @@
+$color: white;
+$item_width: 33%;
+
+html {
+  // height: 100%;
+}
+
+body {
+  color: white;
+  background: $color;
+  margin: 0;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  // align-items: stretch;
+  height: 100vh;
+  justify-content: space-between;
+  // align-content: stretch
+}
+
+.item {
+  // flex: 1 0 round($item_width);
+  min-width: $item_width;
+  // margin-right: 10px;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+}
+
+div:nth-last-child(-n + 3):nth-child(3n + 1),
+div:nth-last-child(-n + 3):nth-child(3n + 1) ~ div {
+  margin-bottom: 0;
+}
+
+@for $i from 1 through 9 {
+.item:nth-child(#{$i}) { opacity: random() + 0.45; }
+}
+
