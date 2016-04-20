@@ -1,0 +1,96 @@
+@import 'variables';
+@import 'mixins';
+
+body {
+  margin: 0;
+  height: 100vh;
+  font-family: 'Roboto', sans-serif;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100%;
+}
+
+h2 {
+  margin-bottom: 25px;
+  font-weight: 100;
+  line-height: 2em;
+  font-size: 40px;
+
+  span {
+    font-size: 1.25em;
+    font-weight: 300
+  }
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  height: 60%;
+  width: 100%;
+  justify-content: space-between;
+  align-content: space-around;
+}
+
+.box {
+  box-sizing: border-box;
+  margin-bottom: 10px;
+  color: #fff;
+  font-weight: 100;
+  font-size: 52px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: calc(33.3% - 10px);
+}
+
+.widget-content {
+  text-align: center;
+}
+
+.widget-subtext {
+  opacity: .5;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 300;
+  display: block;
+}
+
+.widget-helper {
+  border-right: 1px solid #fff;
+  opacity: .5;
+  height: 40px;
+  margin: 0 10px;
+}
+
+.widget-sufix {
+  font-size: 40px;
+  opacity: .5;
+}
+
+@include max-screen(map-get($breakpoints, tablet)) {
+  .wrapper {
+    width: 95%;
+    justify-content: flex-start;
+    margin: 0 auto;
+  }
+
+  .container {
+    align-content: flex-start;
+  }
+
+  .box {
+    width: 100% !important;
+  }
+
+  h2 {
+    font-size: 24px;
+  }
+}

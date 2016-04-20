@@ -1,0 +1,24 @@
+@mixin max-screen($bp) {
+  $em: 1;
+  @if map-has-key($breakpoints, $bp) {
+    $em: map-get($breakpoints, $bp)/$bf;
+  } @else {
+    $em: $bp/$bf;
+  }
+  @media(max-width: #{$em}px) {
+    @content;
+  }
+}
+
+@mixin min-screen($bp) {
+  $em: 1;
+  @if map-has-key($breakpoints, $bp) {
+    $em: map-get($breakpoints, $bp)/$bf;
+  } @else {
+    $em: $bp/$bf;
+  }
+
+  @media(min-width: #{$em}px) {
+    @content;
+  }
+}
