@@ -8,6 +8,7 @@ class Widget extends React.Component {
       display: props.helper ? 'inline-block' : 'none'
     }
   }
+
   render() {
     return (
       <div className="widget-content">

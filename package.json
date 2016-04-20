@@ -4,8 +4,6 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "css": "node-sass scss/style.scss dist/css/style.css",
-    "watch": "npm run css -- -w & browser-sync start --server --files \"**/*.css\" \"*.html\"",
     "dev": "./node_modules/webpack-dev-server/bin/webpack-dev-server.js"
   },
   "author": "",
