@@ -1,6 +1,5 @@
 import Multiple from 'multiple.js'
 import React from 'react'
-import ReactDOM from 'react-dom'
 
 const mainColor = 'blue'
 const defaultSize = '33'

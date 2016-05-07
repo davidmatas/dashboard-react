@@ -2,51 +2,51 @@
 @import 'mixins';
 
 body {
+  font-family: 'Roboto', sans-serif;
   margin: 0;
   height: 100vh;
-  font-family: 'Roboto', sans-serif;
 }
 
 .wrapper {
+  align-items: center;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
   height: 100vh;
+  justify-content: center;
   width: 100%;
 }
 
 h2 {
-  margin-bottom: 25px;
+  font-size: 40px;
   font-weight: 100;
   line-height: 2em;
-  font-size: 40px;
+  margin-bottom: 25px;
 
   span {
     font-size: 1.25em;
-    font-weight: 300
+    font-weight: 300;
   }
 }
 
 .container {
+  align-content: space-around;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   height: 60%;
-  width: 100%;
   justify-content: space-between;
-  align-content: space-around;
+  width: 100%;
 }
 
 .box {
+  align-items: center;
   box-sizing: border-box;
+  display: flex;
+  color: $white;
   margin-bottom: 10px;
-  color: #fff;
   font-weight: 100;
   font-size: 52px;
-  display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
   height: calc(33.3% - 10px);
 }
@@ -56,18 +56,18 @@ h2 {
 }
 
 .widget-subtext {
+  display: block;
+  font-size: 12px;
   opacity: .5;
   text-transform: uppercase;
-  font-size: 12px;
   font-weight: 300;
-  display: block;
 }
 
 .widget-helper {
-  border-right: 1px solid #fff;
-  opacity: .5;
+  border-right: 1px solid $white;
   height: 40px;
   margin: 0 10px;
+  opacity: .5;
 }
 
 .widget-sufix {
@@ -77,9 +77,9 @@ h2 {
 
 @include max-screen(map-get($breakpoints, tablet)) {
   .wrapper {
-    width: 95%;
     justify-content: flex-start;
     margin: 0 auto;
+    width: 95%;
   }
 
   .container {
